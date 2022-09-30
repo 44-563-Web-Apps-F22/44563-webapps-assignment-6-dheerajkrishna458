@@ -10,7 +10,7 @@
 
 <form>
     <label for="form1_age">Enter the secret musician name</label>
-    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30  value="John Lennon"> <br>
+    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2  value="John Lennon"> <br>
 
     <label for="form1_nick">Guess the musician name </label>
     <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
@@ -20,10 +20,13 @@
 
 
 <p id="result">This text will be replaced </p>
-
+<div>
+    <img  id= "image" src="honeybee.jpg" onclick="swapImage()" alt="honeybee" style="width: 100px; height : 100px;">
+</div>
 <script> 
     correct =0
     wrong=0
+    useImage=1
 function checkGuess(){
     console.log("Getting form values")
 
@@ -38,6 +41,19 @@ function checkGuess(){
         wrong=wrong+1
         alert("Wrong musician")
         out.innerHTML = "correct - "+correct+" , "+"wrong - "+wrong
+    }
+}
+function swapImage(){
+    switch(useImage){
+        case 1 :useImage=useImage+1
+                document.getElementById("image").src = "redant.jpg";
+                break;
+        case 2 :useImage=useImage+1
+                document.getElementById("image").src = "dragonfly.jpg";
+                break;
+        case 3 :useImage=1
+                document.getElementById("image").src = "honeybee.jpg";
+                break;
     }
 }
 </script>
