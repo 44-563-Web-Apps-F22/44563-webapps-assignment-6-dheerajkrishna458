@@ -45,8 +45,10 @@ function checkGuess(){
 }
 function swapImage(){
     switch(useImage){
-        case 1 :useImage=useImage+1
+        case 1 ://image.src = "redant.jpg" ;
+
                 document.getElementById("image").src = "redant.jpg";
+                useImage=useImage+1
                 break;
         case 2 :useImage=useImage+1
                 document.getElementById("image").src = "dragonfly.jpg";
