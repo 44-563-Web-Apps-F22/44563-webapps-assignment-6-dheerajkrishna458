@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>vacation file</head>
+<body>
+<h1>dheeraj krishna mekala selects vacation</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">Travel by Air</label>
+    <input type ="checkbox" id="form1_age" name="form1_age" min=10 max=50 step=2 value=True> <br>
+
+    <label for="form1_nick">Domestic</label>
+    <input type ="checkbox" id="form1_nick" name="form1_nick" value=True autofocus> <br>
+    
+    <input type="checkbox" id="cb1_onion" name="topping3" value=False checked>
+    <label for="cb1_onion">Resort</label></br>
+
+    <input type="button" onclick="selectVacation()" value="Select a vacation">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+let my_vacation=""
+function selectVacation(){
+    my_vacation=""
+    console.log("Getting form values")
+    Travel = document.getElementById("form1_age").checked
+    domestic = document.getElementById("form1_nick").checked
+    resort = document.getElementById("cb1_onion").checked
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+
+</body>
+</html> 
