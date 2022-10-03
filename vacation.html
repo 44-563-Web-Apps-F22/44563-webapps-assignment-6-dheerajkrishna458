@@ -18,6 +18,18 @@
     <input type="button" onclick="selectVacation()" value="Select a vacation">
 </form>
 
+<form>
+    <label for="city">Enter a city</label>
+    <input type ="text" id="city" name="city" min=10 max=50 step=2 value="city"> <br>
+
+    <label for="price">Enter price </label>
+    <input type ="text" id="price" name="price" autofocus> <br>
+
+    <input type="button" onclick="updateVacation()" value="Update the vacation">
+</form>
+
+
+
 
 <p id="result">This text will be replaced </p>
 
@@ -37,6 +49,12 @@ function selectVacation(){
     } else {
         out.innerHTML = "Values were not confirmed"
     }
+}
+updateVacation(){
+    
+    Travel = document.getElementById("city").value
+    domestic = document.getElementById("price").value
+    my_vacation=city
 }
 </script>
 
