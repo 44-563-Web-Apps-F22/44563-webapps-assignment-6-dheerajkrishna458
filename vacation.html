@@ -41,16 +41,9 @@ function selectVacation(){
     Travel = document.getElementById("form1_age").checked
     domestic = document.getElementById("form1_nick").checked
     resort = document.getElementById("cb1_onion").checked
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
-    
-    out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
-    }
 }
-updateVacation(){
+
+function updateVacation(){
     
     Travel = document.getElementById("city").value
     domestic = document.getElementById("price").value
